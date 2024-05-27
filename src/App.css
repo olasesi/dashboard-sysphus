@@ -1,0 +1,521 @@
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("./assets/fonts/satoshi/WEB/fonts/Satoshi-Regular.woff2")
+      format("woff2"),
+    url("./assets/fonts/satoshi/WEB/fonts/Satoshi-Regular.woff") format("woff"),
+    url("./assets/fonts/satoshi/WEB/fonts//Satoshi-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+/* body {
+  background-color: #1c2127;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #1c2127;
+  width: 100%;
+}
+
+/* .dashboard {
+  background-color: transparent;
+}
+
+.content0 {
+  display: flex;
+}
+
+.content1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.content2 {
+  display: flex;
+} */
+
+/* .header {
+  height: 72px;
+  width: 1440px;
+  border-bottom: 1px solid #32383f;
+  margin-bottom: 8px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c2127;
+  height: 108px;
+  width: 100%;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #32383f;
+  padding-top: 44px;
+}
+
+.topbar__logo {
+  width: 121px;
+  height: 34px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.topbar__icon-links {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.topbar__avatar {
+  background-color: #f0a0a0;
+  width: 32px;
+  height: 32px;
+  border-radius: 100px;
+  border: 1.26px solid #df9090;
+  cursor: pointer;
+}
+
+.topbar__globe-icon {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.topbar__menu {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.topinfo {
+  height: 126px;
+  background-color: #20252b;
+  border: 1px solid #262932;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.topinfo__upper-section {
+  width: 313px;
+  padding-left: 16px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topinfo__dropdown {
+  width: 179px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.topinfo__label {
+  min-width: 139px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.topinfo__icon-text {
+  min-width: 139px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 16px;
+}
+
+.topinfo__icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.topinfo__text {
+  line-height: 32px;
+  font-size: 18px;
+  font-family: "Satoshi-Regular";
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.topinfo__caret {
+  display: flex;
+  align-items: center;
+}
+
+.topinfo__amount {
+  display: flex;
+  justify-content: left;
+  width: 91px;
+  min-height: 24px;
+  color: #00c076;
+  font-family: "Satoshi-Regular";
+}
+
+.topinfo__menu {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
+
+.topinfo__lower-section {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  min-height: 48px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.topinfo__lower-section::-webkit-scrollbar {
+  display: none;
+}
+
+.topinfo__content {
+  border-right: 1px solid rgba(234, 240, 254, 0.04);
+  border-radius: 1px;
+  margin-right: 16px;
+  display: inline-block;
+  width: 130px;
+  min-height: 48px;
+}
+
+.topinfo__content:first-child {
+  margin-left: 16px;
+}
+
+.topinfo__outer {
+  display: block;
+}
+
+.topinfo__changes {
+  width: 118px;
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.topinfo__icon {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+.topinfo__value {
+  color: #a7b1bc;
+  font-family: "Satoshi-Regular";
+  display: flex;
+  align-items: center;
+  width: 118px;
+  height: 24px;
+}
+
+.topinfo__value-rate {
+  height: 24px;
+  font-family: "Satoshi-Regular";
+  color: #ffffff;
+}
+
+.topinfo__value-rate.topinfo__value-rate--success {
+  color: #00c076;
+}
+
+/*Hamburger menu*/
+.hamburger-menu {
+  background: #1c2127;
+  position: absolute;
+  top: 110px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 214px;
+  min-height: 248px;
+  padding: 8px 0px 8px 0px;
+  border-radius: 12px;
+  border: 1px solid #373b3f;
+  box-shadow: 0px 4px 16px 0px #00000014;
+  cursor: pointer;
+}
+
+.hamburger-menu__list {
+  line-height: 32px;
+  font-size: 16px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  width: 214px;
+  min-height: 58px;
+  padding: 13px 16px 13px 16px;
+  font-family: "Inter";
+  cursor: pointer;
+}
+
+.hamburger-menu__list:hover {
+  background-color: #252a30;
+}
+
+/*Tabs*/
+
+.tabs {
+  display: block;
+  height: 559px;
+}
+
+.tabs__container {
+  height: 390px;
+  background-color: #20252b;
+  border: 1px solid #262932;
+}
+
+/*Trading*/
+.trading {
+  background-color: #20252b;
+  height: 591px;
+  border: 1px solid #262932;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.trading__pills {
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #262932;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c2127;
+  padding: 0 3px;
+}
+
+.trading__pill {
+  color: #ffffff;
+  font-family: "Satoshi-Regular";
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 8px 14px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.trading__chart {
+  display: flex;
+  align-items: center;
+}
+
+.trading__orderbook {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  justify-content: center;
+}
+
+.trading__recent {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  justify-content: center;
+}
+
+.trading__pill.trading__pill--active {
+  background-color: #e9f0ff0d;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/*time*/
+.trading__time {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  min-height: 32px;
+  padding: 2px 16px;
+  margin-bottom: 16px;
+}
+
+.trading__time::-webkit-scrollbar {
+  display: none;
+}
+
+.trading__time-label {
+  font-family: "Satoshi-Regular";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #a7b1bc;
+  display: inline-block;
+  margin-top: 16px;
+  margin-right: 4px;
+}
+
+.trading__period {
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.trading__period-unit {
+  min-width: 40px;
+  min-height: 28px;
+  border-radius: 100px;
+  padding: 6px 12px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.trading__period-unit.trading__period-unit--active {
+  background-color: #555c63;
+}
+
+.trading__period-unit:hover {
+  background-color: #555c63;
+}
+
+.trading__period-unit:active {
+  background-color: #555c63;
+}
+
+.trading__period-text {
+  font-family: "Satoshi-Regular";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #a7b1bc;
+}
+
+.trading__spacing {
+  border-top: 1px solid rgba(167, 176, 188, 0.05);
+  border-bottom: 1px solid rgba(167, 176, 188, 0.05);
+  padding: 16px 0 24px 16px;
+}
+
+/*Open Order*/
+.tabs {
+  height: 559px;
+}
+
+.tabs__container {
+  width: 100%;
+  height: 350px;
+  border: 1px solid #262932;
+  background-color: #20252b;
+  padding: 16px;
+}
+
+.tabs__tabs-container {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  height: 40px;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #00000029;
+}
+
+.tabs__tabs-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs__tab {
+  display: inline-block;
+  width: 159px;
+  height: 36px;
+  border-radius: 48px;
+  color: #a7b1bc;
+}
+
+.tabs__tab.tabs__tab--active {
+  padding: 10px 8px;
+  border-radius: 8px;
+  background-color: #21262c;
+  box-shadow: 0px 3px 1px 0px #0000000a;
+  box-shadow: 0px 3px 8px 0px #0000001f;
+  color: #ffffff;
+}
+
+.tabs__tab.tabs__tab--active > .tabs__inner-divider {
+  border: 0;
+}
+
+.tabs__inner-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20.57px;
+  border-right: 0.91px solid #fcfcfc14;
+  font-family: "Satoshi-Regular";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.tabs__text-container {
+  width: 294px;
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 128px;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs__header {
+  text-align: center;
+  font-family: "Satoshi-Regular";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #ffffff;
+  height: 32px;
+}
+
+.tabs__paragraph {
+  font-family: "Satoshi-Regular";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #a7b1bc;
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+}
